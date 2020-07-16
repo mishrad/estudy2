@@ -7,7 +7,7 @@
 #' The app is run locally.
 #'
 #' @export
-run_demo <- function() {
+run_app <- function() {
 
     if (!requireNamespace("shiny", quietly = TRUE) ||
         !requireNamespace("TTR", quietly = TRUE) ||
