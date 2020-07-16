@@ -10,9 +10,10 @@
 run_demo <- function() {
 
     if (!requireNamespace("shiny", quietly = TRUE) ||
+        !requireNamespace("TTR", quietly = TRUE) ||
         !requireNamespace("shinyjs", quietly = TRUE)) {
         stop(
-            paste0("Packages {shiny} and {shinyjs} needed",
+            paste0("Packages {shiny}, {shinyjs}, and {TTR} needed",
                    " for this function to work. Please install it."),
              call. = FALSE
         )
