@@ -8,6 +8,16 @@
 #'
 #' @export
 run_demo <- function() {
-    app_dir <- system.file("shiny-examples", "estudy2", package = "estudy2")
+
+    if (!requireNamespace("shiny", quietly = TRUE) ||
+        !requireNamespace("shinyjs", quietly = TRUE)) {
+        stop(
+            paste0("Packages {shiny} and {shinyjs} needed",
+                   " for this function to work. Please install it."),
+             call. = FALSE
+        )
+    }
+
+    app_dir <- system.file("shiny_apps", "estudy2", package = "estudy2")
     shiny::runApp(app_dir, display.mode = "normal")
 }
